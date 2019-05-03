@@ -1,1 +1,6 @@
-console.log('hey world');
+import path from 'path';
+
+const log = string => {
+  console.log(string);
+};
+log('hey world');
