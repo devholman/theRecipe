@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipeDetail /> should correctly assign a className 1`] = `
+<div
+  className="bg-white p2 classname-test"
+>
+  <h2
+    className="h2"
+  >
+    Chocolate Cake
+  </h2>
+  <img
+    className="fit max-width-2 "
+  />
+  <div>
+    <span>
+      dessert
+    </span>
+    <span />
+  </div>
+  <h3>
+    ing 1, ing 2
+  </h3>
+  <ul
+    className="list-reset"
+  >
+    <li>
+      ing 1, ing 2
+    </li>
+  </ul>
+  <h3>
+    Steps
+  </h3>
+  <ol>
+    <li>
+      step 1
+    </li>
+    <li>
+      step 2
+    </li>
+  </ol>
+  <a
+    href="/recipe/1"
+    onClick={[Function]}
+  >
+    See More
+  </a>
+</div>
+`;
+
+exports[`<RecipeDetail /> should correctly render a recipe 1`] = `
+<div
+  className="bg-white p2"
+>
+  <h2
+    className="h2"
+  >
+    Chocolate Cake
+  </h2>
+  <img
+    className="fit max-width-2 "
+  />
+  <div>
+    <span>
+      dessert
+    </span>
+    <span />
+  </div>
+  <h3>
+    ing 1, ing 2
+  </h3>
+  <ul
+    className="list-reset"
+  >
+    <li>
+      ing 1, ing 2
+    </li>
+  </ul>
+  <h3>
+    Steps
+  </h3>
+  <ol>
+    <li>
+      step 1
+    </li>
+    <li>
+      step 2
+    </li>
+  </ol>
+  <a
+    href="/recipe/1"
+    onClick={[Function]}
+  >
+    See More
+  </a>
+</div>
+`;
+
+exports[`<RecipeDetail /> should render without recipe ingredients 1`] = `
+<div
+  className="bg-white p2"
+>
+  <h2
+    className="h2"
+  >
+    Chocolate Cake
+  </h2>
+  <img
+    className="fit max-width-2 "
+  />
+  <div>
+    <span>
+      dessert
+    </span>
+    <span />
+  </div>
+  <h3>
+    ing 1, ing 2
+  </h3>
+  <ul
+    className="list-reset"
+  >
+    <li>
+      ing 1, ing 2
+    </li>
+  </ul>
+  <h3>
+    Steps
+  </h3>
+  <a
+    href="/recipe/1"
+    onClick={[Function]}
+  >
+    See More
+  </a>
+</div>
+`;
+
+exports[`<RecipeDetail /> should render without recipe steps 1`] = `
+<div
+  className="bg-white p2"
+>
+  <h2
+    className="h2"
+  >
+    Chocolate Cake
+  </h2>
+  <img
+    className="fit max-width-2 "
+  />
+  <div>
+    <span>
+      dessert
+    </span>
+    <span />
+  </div>
+  <h3 />
+  <h3>
+    Steps
+  </h3>
+  <ol>
+    <li>
+      step 1
+    </li>
+    <li>
+      step 2
+    </li>
+  </ol>
+  <a
+    href="/recipe/1"
+    onClick={[Function]}
+  >
+    See More
+  </a>
+</div>
+`;
+
+exports[`<RecipeDetail /> should render zero state 1`] = `
+<div
+  className="bg-white p2"
+>
+  <h2
+    className="h2"
+  />
+  <img
+    className="fit max-width-2 "
+  />
+  <div>
+    <span />
+    <span />
+  </div>
+  <h3 />
+  <h3>
+    Steps
+  </h3>
+  <a
+    href="/recipe/undefined"
+    onClick={[Function]}
+  >
+    See More
+  </a>
+</div>
+`;

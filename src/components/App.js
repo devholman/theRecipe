@@ -1,53 +1,93 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './Home';
+import Favorites from './Favorites';
+import Recipe from './Recipe';
 import Header from './Header';
-import RecipeList from './RecipeList';
-import RecipeDetail from './RecipeDetail';
-
-console.log(API_URL);
+import NotFound from './NotFound';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       recipes: [],
+      favorites: [],
       currentRecipe: null
     };
   }
-
   componentDidMount() {
     fetch(`${API_URL}/v1/recipes`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         this.setState({ recipes: data });
       });
   }
-
   onClickRecipe = id => {
-    console.log(id);
     fetch(`${API_URL}/v1/recipes/${id}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         this.setState({
           currentRecipe: data
         });
       });
   };
+  otherClickRecipe = id => {
+    fetch(`${API_URL}/v1/recipes/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          currentRecipe: data
+        });
+      });
+  };
+  toggleFavorite = id => {
+    this.setState(({ favorites, ...state }) => {
+      if (favorites.includes(id)) {
+        return {
+          ...state,
+          favorites: favorites.filter(f => f !== id)
+        };
+      }
+
+      return { ...state, favorites: [...favorites, id] };
+    });
+  };
   render() {
     return (
-      <div>
-        <Header />
-        <main style={{ display: 'flex' }}>
-          <RecipeList
-            recipes={this.state.recipes}
-            onclick={this.onClickRecipe}
-            style={{ flex: 3 }}
-          />
-          <RecipeDetail recipe={this.state.currentRecipe} style={{ flex: 5 }} />
+      <BrowserRouter>
+        <main>
+          <Header />
+          <Switch>
+            <Redirect from="/home" to="/" />
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Home
+                  state={this.state}
+                  toggleFavorite={this.toggleFavorite}
+                  onClickRecipe={this.onClickRecipe}
+                />
+              )}
+            />
+            <Route
+              path="/favorites"
+              render={() => (
+                <Favorites
+                  state={this.state}
+                  toggleFavorite={this.toggleFavorite}
+                  onClickRecipe={this.onClickRecipe}
+                />
+              )}
+            />
+            <Route path="/recipe/:id" component={Recipe} />
+            <Route component={NotFound} />
+          </Switch>
         </main>
-      </div>
+      </BrowserRouter>
     );
   }
 }
+
 export default App;

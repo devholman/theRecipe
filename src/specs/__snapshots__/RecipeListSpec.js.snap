@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipeList /> should not break when no recipes are passed 1`] = `
+<ul
+  className="list-reset"
+/>
+`;
+
+exports[`<RecipeList /> should render correctly 1`] = `
+<ul
+  className="list-reset"
+>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      🗃️
+    </span>
+    <span>
+      recipe 1
+    </span>
+    <span>
+      cat 1
+    </span>
+  </li>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      🗃️
+    </span>
+    <span>
+      recipe 2
+    </span>
+    <span>
+      cat 2
+    </span>
+  </li>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      🗃️
+    </span>
+    <span>
+      recipe 3
+    </span>
+    <span>
+      cat 3
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<RecipeList /> should render favorites 1`] = `
+<ul
+  className="list-reset"
+>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      😀
+    </span>
+    <span>
+      recipe 1
+    </span>
+    <span>
+      cat 1
+    </span>
+  </li>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      🗃️
+    </span>
+    <span>
+      recipe 2
+    </span>
+    <span>
+      cat 2
+    </span>
+  </li>
+  <li
+    className="border-bottom border-bottom-dashed py2 pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      🗃️
+    </span>
+    <span>
+      recipe 3
+    </span>
+    <span>
+      cat 3
+    </span>
+  </li>
+</ul>
+`;

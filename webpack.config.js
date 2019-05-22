@@ -10,7 +10,8 @@ module.exports = {
   entry: ['whatwg-fetch', './index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './bundle.js'
+    filename: './bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -22,7 +23,10 @@ module.exports = {
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
             //So I don't have to explicitly bind callbacks in the constructor for methods/ can use => functions
-            plugins: ['@babel/plugin-proposal-class-properties']
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-proposal-object-rest-spread'
+            ]
           }
         }
       },
@@ -33,10 +37,17 @@ module.exports = {
       },
       {
         //all files that match this config will be copied to dist folder
-        test: /\.m?(png|jpeg)$/,
+        test: /\.m?(png|jpeg|svg)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipeListItem /> should not break if no recipe is sent 1`] = `
+<li
+  className="border-bottom border-bottom-dashed py2 pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    🗃️
+  </span>
+  <span />
+  <span />
+</li>
+`;
+
+exports[`<RecipeListItem /> should render favorite state false 1`] = `
+<li
+  className="border-bottom border-bottom-dashed py2 pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    🗃️
+  </span>
+  <span>
+    Chocolate Cake
+  </span>
+  <span>
+    dessert
+  </span>
+</li>
+`;
+
+exports[`<RecipeListItem /> should render favorite state true 1`] = `
+<li
+  className="border-bottom border-bottom-dashed py2 pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    😀
+  </span>
+  <span>
+    Chocolate Cake
+  </span>
+  <span>
+    dessert
+  </span>
+</li>
+`;
+
+exports[`<RecipeListItem /> should render successfully 1`] = `
+<li
+  className="border-bottom border-bottom-dashed py2 pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    🗃️
+  </span>
+  <span>
+    Chocolate Cake
+  </span>
+  <span>
+    dessert
+  </span>
+</li>
+`;
