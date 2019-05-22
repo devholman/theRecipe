@@ -55,7 +55,7 @@ class App extends React.Component {
   };
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/theRecipe">
         <main>
           <Header />
           <Switch>
